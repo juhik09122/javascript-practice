@@ -1,0 +1,22 @@
+// 10. Check if All Students Passed
+Array:
+const students = [
+    { 
+        name: "A", 
+        marks: 45 },
+    { 
+        name: "B",
+         marks: 35
+         },
+    { 
+        name: "C",
+         marks: 50 
+        }
+]
+
+const allPassedStu = students
+// .filter(stu => stu.marks >=40)
+.map(stu => stu.marks>=40)
+.reduce((total,passed) => total && passed,true)
+
+console.log(allPassedStu);
